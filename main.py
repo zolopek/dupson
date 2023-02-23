@@ -1,36 +1,47 @@
-#print() pisze po ekranie
 
-#input() czeka na odpowiedz uzytkownika
+course = "  Python Programming  "
+print(course.upper()) # upper robi cpslock ze wszystkiego
+print(course.lower()) # wszystko z małej
+print(course.title()) # robi pierwsze litery z duzą litera
+print(course.lstrip()) # usuwa spacje
+print(course.find("Pro")) # znajduje na ktorej pozycji jest
+print(course.replace("P", "j")) # zamienia literke p na j
+print("Pro" in course) # czy wystepuje w zdaniu Pro
+print("Swift" not in course) # czy nie znajduje sie swift w zdaniu
 
-x = "dududupson"
-zmienna = "jakis ciag znakow"
-print(len(x))   # liczy znaki w stringu i je wypluwa
-print(x[0])   # pisze znak ze stringa na pozycji 0 (czyli s)
-print(x[1:5])   # to samo co na gorze ale od 1 do 5 pozycji
-print(x[2:]) # leci od 2 do końca
-print(x[:5]) # od poczatku do 5
-print(x[:])   # dziala tak samo jak print(x)
-print(x[::2])  # co drugi element
+print(10/3)    #dzieli
+print(10//3)  # dzieli i obcina wszystko po przecinku
+print(10 % 3) # ile wynosi reszta z dzielenia
+print(10 ** 3) # robi do potegi
 
-# [x:y:z]
-# x - poczatek
-# y - koniec
-# z - krok (co jeden albo dwa albo wiencej)
+import math  # importujesz matme do pythona( jest to specjalna biblioteka)
 
-x = "konrad"
-y = "dupson"
-# print(x * 5, y, end="\n") #end na koncu robi wszytsko w jednej linijce
-#print(x * 5, y, end="---")   # ctrl + d kopiowanie linijki (czacha wybucha)
-#print(x * 5, y, end="---")   # ctrl + d kopiowanie linijki (czacha wybucha)
+print(round(2.9)) # zaookragla
+print(abs(-2.9)) # wartosc bezwzgledna
 
-print(f"Witaj {x} jdsfjfsj sfjkf")   # f pozwala na ulatwienie i nie dodawanie plusow glupich
+print(math.ceil(2.2)) # zaogragla do gory
+print(math.floor(2.9)) # zoogragla w dol
 
-x = input("podaj swoj wiek")   # jak masz zdanie nie w cudzyslowie zaznacz je i kliknij cudzyslow samo sie zrobi
-print(int(x)+2)
+print("bag" > "apple")  # pierwsza litera "b" jest na 2 pozycji "a" a na 1 2>1 true
 
-james_bond = 7
-# nasz cel to 007
-print(str(james_bond).zfill(3)) # wypelnia zerami
+print(ord("d")) # jaka wartosc ma dana litera
+print(ord("B"))
 
 
+zmienna = 120
+if zmienna :
+    print("gonwo")
+elif zmienna == 130:    # inaczej else if
+    print("kakaka")
+else:
+    print("cos innego");
 
+
+wiek = int(input("podaj wiek: "))
+if wiek >= 18:
+    print("ulala legalne")
+else:
+    print("sory nielegalne")
+
+for zmienna in range(3):
+    print(zmienna)
