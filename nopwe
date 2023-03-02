@@ -1,0 +1,76 @@
+succesful = True
+for number in range(3):    # robisz zeby ci petle 3 razy napisal
+    print("attempt")
+    if succesful:
+        print("succesfuLL")
+        break                # przerwya petle
+else:
+    print("Attempt 4 times and failed ")
+
+course = "  Python Programming  "
+print(course.upper()) # upper robi cpslock ze wszystkiego
+print(course.lower()) # wszystko z małej
+print(course.title()) # robi pierwsze litery z duzą litera
+print(course.lstrip()) # usuwa spacje
+print(course.find("Pro")) # znajduje na ktorej pozycji jest
+print(course.replace("P", "j")) # zamienia literke p na j
+print("Pro" in course) # czy wystepuje w zdaniu Pro
+print("Swift" not in course) # czy nie znajduje sie swift w zdaniu
+
+print(10/3)    #dzieli
+print(10//3)  # dzieli i obcina wszystko po przecinku
+print(10 % 3) # ile wynosi reszta z dzielenia
+print(10 ** 3) # robi do potegi
+for x in range(5):
+    for y in range(3):
+
+import math  # importujesz matme do pythona( jest to specjalna biblioteka)
+        print(f"( {x}, {y})")       # wypisuje wyszystkie kombinacje
+
+print(round(2.9)) # zaookragla
+print(abs(-2.9)) # wartosc bezwzgledna
+
+print(math.ceil(2.2)) # zaogragla do gory
+print(math.floor(2.9)) # zoogragla w dol
+#for x in [1, 2, 3, 4]:    # wypisuje liczby po kolei
+   # print(x)
+
+print("bag" > "apple")  # pierwsza litera "b" jest na 2 pozycji "a" a na 1 2>1 true
+
+print(ord("d")) # jaka wartosc ma dana litera
+print(ord("B"))
+y = 0
+for x in range(1, 10):
+    if x % 2 == 0:
+        print(x)
+        y = y + 1
+
+
+zmienna = 120
+if zmienna :
+    print("gonwo")
+elif zmienna == 130:    # inaczej else if
+    print("kakaka")
+else:
+    print("cos innego");
+
+def dodowanie(x, y):
+    print(x+y)
+
+dodowanie(2, 3)
+
+def dodowanie2(x, y, z = 0):
+    print(x+y+z)
+
+dodawanie2(2, 3 , 5)
+dodawanie2(5, 6)
+dodowanie2(9, 5)
+
+wiek = int(input("podaj wiek: "))
+if wiek >= 18:
+    print("ulala legalne")
+else:
+    print("sory nielegalne")
+
+for zmienna in range(3):
+    print(zmienna)
