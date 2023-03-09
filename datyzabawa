@@ -1,0 +1,13 @@
+x = input( " Podaj date w postaci dd-mm-rrrr :")
+
+d = x[ :2]
+m = x[3:5]
+r = x[6:]
+
+
+print(f"{r}-{m}-{d}")  # moze ci to fajnie spacjami odzielic albo czym tylko sobie zamarzysz
+
+y = x.split("-") # wypisuje bez myslnikow idzei zgodnie z nimi
+print(y)
+
+print(type(y)) 
