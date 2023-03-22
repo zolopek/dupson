@@ -1,0 +1,138 @@
+#include <iostream>
+#include<cstdlib>
+#include<conio.h>
+#include<string>
+using namespace std;
+
+int hp = 20, mp = 20, ehp = 35, move;
+
+void lose()
+{
+	cout << "You lose." << endl;
+	hp = 20;
+	mp = 20;
+	ehp = 20;
+	
+}
+
+void win ()
+{
+	cout << "You win." << endl;
+	hp = 20;
+	mp = 20;
+	ehp = 20;
+}
+
+main()
+{
+	label:
+	cout << "ehp: " << ehp << endl << "hp: " << hp << endl <<"mp: " << mp << endl;
+	cout << "(1)Attack" << endl << "(2) Magic Attack" << endl << "(3) Summon" << endl << "(4) Krecik puka w taborecik" << endl << "(5) potka szmato " << endl;
+	cin>> move;
+	system("cls");
+	cout << "Status: " << endl;
+	
+	if (move == 1)
+	{
+		
+		cout << "You sliced the enemy with your sword." << endl;
+		ehp -= 1;
+		if (ehp <0)
+		{
+			win();
+				return 0;
+			
+	}
+     
+    if (hp < 0)
+    {
+    	lose();
+    	return 0;
+	}
+	cout << "The enemy casts a Magic Attack." << endl << endl;
+	hp-=2;
+
+	}
+
+
+if (move == 2)
+{
+	cout << "You cast a devastating Magic Attack." << endl;
+	ehp -= 2;
+	mp-=1;
+	if (ehp < 0)
+	{
+		win();
+		return 0 ;
+	}
+	if (hp<0)
+	{
+		lose ();
+		return 0;
+	}
+	cout << "The enemy used his sword." << endl << endl;
+	hp -= 1;
+}
+
+if (move ==3)
+{
+	cout << "You summoned Ultimal" << endl;
+	ehp -= 10;
+	mp -=15;
+	hp -= 1;
+	if (ehp < 0)
+	{
+		win();
+		return 0;
+		
+	}
+
+	if (hp< 0 )
+	{
+		lose();
+		return 0;
+	}
+	cout << "The enemy used his sword ." << endl << endl;
+	hp -= 1;
+
+	
+}
+if (move ==4)
+{
+	cout << "Atak z kreta" << endl;
+	ehp -= 15;
+	mp -=10;
+	hp -= 5;
+	if (ehp < 0)
+	{
+		win();
+		return 0;
+		
+	}
+	if (hp< 0 )
+	{
+		lose();
+		return 0;
+	}
+	cout << "tarcza szmato ." << endl << endl;
+	hp -= 1;
+}
+
+if (move ==5)
+{
+	cout << "Potka leczenia" << endl;
+	ehp -= 0;
+	mp -=5;
+	hp += 3;
+	if (ehp < 0)
+	{
+		win();
+		return 0;
+		
+	}
+
+}
+
+goto label;
+
+}
