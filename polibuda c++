@@ -1,0 +1,285 @@
+/* #include <iostream>
+#include <conio.h> //parametry funkcji
+using namespace std;
+
+void Dodaj(int nWartosc1, int nWartosc2)
+{
+	int nWynik = nWartosc1 + nWartosc2;
+	cout << nWartosc1 << "+" << nWartosc2 << "=" << nWynik;
+	cout << endl;
+	
+}
+
+main()
+{
+	int nLiczba1;
+	cout << "Podaj pierwsza liczbe: ";
+	cin >> nLiczba1;
+	int nLiczba2;
+	cout << "Podaj druga liczbe: ";
+	cin >> nLiczba2;
+	Dodaj (nLiczba1, nLiczba2);
+	getch();
+}
+
+
+
+
+
+
+#include <iostream>
+#include <conio.h>  // funkcja warunkowa if
+using namespace std;
+
+main()
+{
+	int nLiczba;
+	cout << "Wprowadz liczbe wieksza od 10: ";
+	cin >> nLiczba;
+	if (nLiczba > 10)
+	{
+		cout << "Dziekuje." << endl;
+		cout << "Wcisnij dowolny klawisz by zakonczyc.";
+		
+	}
+	else 
+	{
+		cout << "Liczba " << nLiczba << " nie jest wieksza niz 10." << endl;
+		cout << "Wpisales zla liczbe. " ; 
+	}
+	getch();
+	
+}
+
+// to samo robimy co na gorze ale inaczej aka szybciej/prosciej
+
+
+#include <iostream>
+#include <conio.h> // petla warunkowa do i while
+using namespace std;
+
+main()
+{
+	int nLiczba;
+	do
+	{
+		cout << "Wprowadz liczbe wieksze od 10: ";
+		cin >> nLiczba;
+	}
+	while (nLiczba <= 10);
+		cout << "dziekuje za mile wspolprace ";
+		getch();
+}
+
+
+
+
+
+
+#include <string>
+#include <iostream>
+#include <conio.h>
+#include <math.h>  // wyrazenia logiczne - liczba pierwesza
+using namespace std;
+
+
+
+
+bool LiczbaPierwsza(unsigned uLiczba)
+{
+	if (uLiczba == 2) return true;
+	for (unsigned i =2; i <= sqrt(uLiczba); i++)
+	{
+		if (uLiczba % i == 0)
+			return false;
+			
+	}
+	return true;
+}
+
+main()
+{
+	unsigned uWartosc;
+	cout << "Podaj liczbe: ";
+	cin >> uWartosc;
+	if (LiczbaPierwsza(uWartosc))
+		cout << "Liczba " << uWartosc << " jest pierwsza.";
+	else
+		cout << "Liczba " << uWartosc << " nie jest pierwsza.";
+		getch();
+}
+
+
+
+
+
+#include  <iostream>
+#include <conio.h> // rownania liniowe
+using namespace std;
+
+main()
+{
+	float fA;
+	cout << "Podaj wspolczynnik a : ";
+	cin >> fA;
+	float fB;
+	cout << "podaj wspolczynnik b: ";
+	cin >> fB;
+	if (fA ==0.0)
+	{
+		if (fB == 0.0)
+		cout << "Rownanie spelnia kazda liczba rzeczywista. " << endl;
+		else 
+			cout << "Rownanie nie posiada rozwiazan. " << endl;
+			
+	}
+	else
+		cout << "x = " << fB/fA << endl;
+		getch();
+			
+}
+
+
+
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+main()
+{
+	float fLiczba1;
+	cout << "Wprowadz pierwsza liczbe: ";
+	cin >> fLiczba1;
+	float fLiczba2;
+	cout << "Wprowadz druga liczbe: ";
+	cin >> fLiczba2;
+	int nOpcja;
+	cout << "Wybierz dzialanie: " << endl;
+	cout << "1 dodawanie" << endl;
+	cout << "2 odejmowanie" << endl;
+	cout <<  "3 mnozenie" << endl;
+	cout << "4 dzielenie "<< endl;
+	cout << "0 wyjscie" << endl;
+	cout << "twoj wybor: " << endl;
+	cin >> nOpcja;
+	switch(nOpcja)
+	{
+		case 1 :
+			cout << fLiczba1 << " + " << fLiczba2 << " = "
+			<< fLiczba1 + fLiczba2; break;
+		case 2:
+			cout << fLiczba1 << " -" << fLiczba2 << " = "
+			<< fLiczba1 - fLiczba2; break;
+		case 3:
+			cout << fLiczba1 << " * " << fLiczba2 << " = "
+			<< fLiczba1 * fLiczba2; break;
+		case 4:
+			if (fLiczba2 == 0.0)
+				cout << "nie mozna dzielic przez 0";
+				else
+			cout << fLiczba1 << " / " << fLiczba2 << " = "
+			<< fLiczba1 / fLiczba2; break;
+		case 0:
+			cout << "Dowidzenia";
+			break;
+			
+		default:
+			cout << "nieznana opcja";
+	}    
+ getch();
+}
+
+
+
+
+//generator losowych liczb
+#include <iostream>
+#include <conio.h>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+main()
+{
+	//wylosowanie liczby
+	srand ((int) time(NULL));
+	int nWylosowana = rand() % 100 + 1;
+	cout << " Wylosowano liczbe z przedzialu 1-100." << endl;
+	
+	//pierwsza proba odgadniecia liczby
+	int nWprowadzona;
+	cout << "sproboj ja odgadnac :";
+	cin >> nWprowadzona;
+	
+	
+	//kolejne proby (az do skutku) przy uzyciu petli while
+	while (nWprowadzona != nWylosowana)
+	{
+		if (nWprowadzona < nWylosowana)
+			cout << "liczba jest za mala ";
+		else
+		cout << "Liczba jest za duza ";2
+		cout<< "sproboj jeszcze raz: ";
+		cin >> nWprowadzona;
+		
+	}
+	cout << "celny strzal brawo" << endl;
+	getch();
+}
+
+
+
+
+//sizeof - pobranie rozmiaru zmiennej lub typu
+#include <iostream>
+#include <conio.h>
+#include <cstdlib>
+using namespace std;
+
+main()
+{
+	cout << "Typy liczb calkowitych:  " << endl;
+	cout << "- int: " << sizeof(int) << endl;	
+	cout << "- short in: "<< sizeof(short int) << endl;
+	cout << "- long in: "<< sizeof(long int) << endl;
+	cout << "- char: "<< sizeof(char) << endl;	
+	cout << endl;
+	cout << "typy liczb zmiennoprzecinkowych:"<< endl;
+	cout << "- float: "<< sizeof(float) << endl;
+	cout << "- double: "<< sizeof(double) << endl;
+	getch();	
+	
+}
+
+
+
+
+//petla krokowa for
+#include <iostream>
+#include <conio.h>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int Suma(int nLiczba)
+{
+	int nSuma = 0;
+	for (int i = 1; i <= nLiczba; i++)
+		nSuma+= i;
+	return nSuma;
+}
+main()
+{
+	int nLiczba;
+	cout << "program oblicza sume od 1 do podanej liczby."
+	<< endl;
+	cout << "Podaj liczbe: ";
+	cin >> nLiczba;
+	cout << "Suma liczb od 1 do " << nLiczba << "  wynosi"
+	 << Suma(nLiczba) << ".";
+	 getch();
+	 
+}
+
+*/
